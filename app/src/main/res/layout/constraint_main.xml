@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/holo_green_light">
+
+    <TextView
+        android:id="@+id/txtP"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Aquí estoy"
+        android:background="@android:color/holo_blue_dark"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imgPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tvTilte"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        app:layout_constraintTop_toTopOf="@id/imgPhoto"
+        app:layout_constraintStart_toEndOf="@id/imgPhoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="margins margins margins margins margins margins"
+        android:background="@android:color/holo_red_light"/>
+
+    <View
+        android:id="@+id/blue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_blue_dark"
+        app:layout_constraintStart_toStartOf="@id/tvTilte"
+        app:layout_constraintEnd_toEndOf="@id/tvTilte"
+        app:layout_constraintTop_toBottomOf="@id/tvTilte"
+        app:layout_constraintBottom_toBottomOf="@id/imgPhoto"
+        android:layout_marginTop="16dp"/>
+    
+    <Button
+        android:id="@+id/btnOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Botón"
+        app:layout_constraintStart_toStartOf="@id/blue"
+        app:layout_constraintEnd_toEndOf="@id/blue"
+        app:layout_constraintTop_toBottomOf="@id/imgPhoto"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Botón"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnOne"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Botón"
+        app:layout_constraintStart_toStartOf="@id/btnOne"
+        app:layout_constraintEnd_toEndOf="@id/btnOne"
+        app:layout_constraintTop_toBottomOf="@id/btnTwo"
+        android:layout_marginTop="16dp"/>
+
+    <ImageView
+        android:id="@+id/imgCursosAnt"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:src="@drawable/cursos_ant"
+        android:background="@android:color/holo_purple"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/txtP"
+        />
+
+    <ImageButton
+        android:id="@+id/imgBO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_media_play"
+        app:layout_constraintEnd_toEndOf="@id/imgCursosAnt"
+        app:layout_constraintBottom_toBottomOf="@id/imgCursosAnt"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_media_play"
+        app:layout_constraintEnd_toStartOf="@id/imgBO"
+        app:layout_constraintTop_toTopOf="@id/imgBO"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
